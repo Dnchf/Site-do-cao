@@ -11,7 +11,8 @@ body {
 header {
     background-color: #4b3c5d;
     color: white;
-    padding: 10px 0;
+    width: 100%;
+    height: 150px;
 }
 
 
@@ -20,8 +21,8 @@ header {
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
+    margin: 2000 auto;
+    padding: 0 20px;
 }
 
 /* ================= LOGO ================= */
@@ -47,12 +48,12 @@ header nav a:hover {
     color: #faa72a;
 }
 
-/* ================ QUEM SOMOS ========== */
+/* ================ hero   ========== */
 
 .hero {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     overflow: hidden;
 }
 
@@ -97,7 +98,7 @@ header nav a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: #21203F;
     border: none;
     color: white;
     font-size: 30px;
@@ -120,14 +121,14 @@ header nav a:hover {
     height: 10px;
     width: 10px;
     margin: 5px;
-    background: #ccc;
+    background: #7d7bc9;
     display: inline-block;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .dots .active {
-    background: #fff;
+    background: #5c5aa380;
 }
 
 @media (max-width: 768px) {

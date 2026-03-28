@@ -9,172 +9,84 @@
 </head>
 
 <body>
-    <!-- 1 -->
-   <div class="card">
-    <div class="img-box">
-        <img src="https://placedog.net/300/200?id=1" alt="Cachorro">
+    <div class="cards">
 
-        <div class="overlay">
-            <h3>Thor</h3>
+        <div class="card" onclick="abrirModal(this)">
+            <img src="https://placedog.net/400/300?id=1">
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="fechar" onclick="fecharModal()">×</span>
+
+            <img id="modal-img">
+            <h2>Thor</h2>
             <p>Idade: 2 anos</p>
-            <p>Amigável e brincalhão 🐶</p>
+            <p>Amigável 🐶</p>
+
             <button>Adotar</button>
+
         </div>
     </div>
-</div>
+    <script>
+        let cardOriginal = null;
 
-    <!-- 2 -->
-    <div class="card">
-        <div class="img-box"></div>
-        <img src="https://placedog.net/300/200?id=2">
-        <h3>Luna</h3>
-        <p>Idade: 1 ano</p>
-        <button>Adotar</button>
-    </div>
+        function abrirModal(card, nome, idade, desc) {
+            const modal = document.getElementById("modal");
+            const img = card.querySelector("img");
 
-    <!-- 3 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=3">
-        <h3>Max</h3>
-        <p>Idade: 3 anos</p>
-        <button>Adotar</button>
-    </div>
+            cardOriginal = img;
 
-    <!-- 4 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=4">
-        <h3>Mel</h3>
-        <p>Idade: 2 anos</p>
-        <button>Adotar</button>
-    </div>
+            const modalImg = document.getElementById("modal-img");
 
-    <!-- 5 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=5">
-        <h3>Bob</h3>
-        <p>Idade: 4 anos</p>
-        <button>Adotar</button>
-    </div>
+            // Pega posição da imagem
+            const rect = img.getBoundingClientRect();
 
-    <!-- 6 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=6">
-        <h3>Nina</h3>
-        <p>Idade: 1 ano</p>
-        <button>Adotar</button>
-    </div>
+            modalImg.src = img.src;
+            modalImg.style.position = "fixed";
+            modalImg.style.top = rect.top + "px";
+            modalImg.style.left = rect.left + "px";
+            modalImg.style.width = rect.width + "px";
+            modalImg.style.height = rect.height + "px";
+            modalImg.style.transition = "0.4s ease";
 
-    <!-- 7 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=7">
-        <h3>Rex</h3>
-        <p>Idade: 5 anos</p>
-        <button>Adotar</button>
-    </div>
+            modal.style.display = "flex";
 
-    <!-- 8 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=8">
-        <h3>Bela</h3>
-        <p>Idade: 3 anos</p>
-        <button>Adotar</button>
-    </div>
+            setTimeout(() => {
+                modal.classList.add("show");
 
-    <!-- 9 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=9">
-        <h3>Zeus</h3>
-        <p>Idade: 2 anos</p>
-        <button>Adotar</button>
-    </div>
+                modalImg.style.top = "50%";
+                modalImg.style.left = "50%";
+                modalImg.style.transform = "translate(-50%, -50%)";
+                modalImg.style.width = "350px";
+                modalImg.style.height = "auto";
+            }, 10);
 
-    <!-- 10 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=10">
-        <h3>Amora</h3>
-        <p>Idade: 1 ano</p>
-        <button>Adotar</button>
-    </div>
+            document.getElementById("modal-nome").innerText = nome;
+            document.getElementById("modal-idade").innerText = "Idade: " + idade;
+            document.getElementById("modal-desc").innerText = desc;
+        }
 
-    <!-- 11 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=11">
-        <h3>Spike</h3>
-        <p>Idade: 4 anos</p>
-        <button>Adotar</button>
-    </div>
+        function fecharModal() {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
 
-    <!-- 12 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=12">
-        <h3>Lola</h3>
-        <p>Idade: 2 anos</p>
-        <button>Adotar</button>
-    </div>
+            const rect = cardOriginal.getBoundingClientRect();
 
-    <!-- 13 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=13">
-        <h3>Fred</h3>
-        <p>Idade: 6 anos</p>
-        <button>Adotar</button>
-    </div>
+            modalImg.style.top = rect.top + "px";
+            modalImg.style.left = rect.left + "px";
+            modalImg.style.width = rect.width + "px";
 
-    <!-- 14 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=14">
-        <h3>Duda</h3>
-        <p>Idade: 3 anos</p>
-        <button>Adotar</button>
-    </div>
-
-    <!-- 15 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=15">
-        <h3>Apolo</h3>
-        <p>Idade: 2 anos</p>
-        <button>Adotar</button>
-    </div>
-
-    <!-- 16 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=16">
-        <h3>Kiara</h3>
-        <p>Idade: 1 ano</p>
-        <button>Adotar</button>
-    </div>
-
-    <!-- 17 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=17">
-        <h3>Toby</h3>
-        <p>Idade: 5 anos</p>
-        <button>Adotar</button>
-    </div>
-
-    <!-- 18 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=18">
-        <h3>Jade</h3>
-        <p>Idade: 3 anos</p>
-        <button>Adotar</button>
-    </div>
-
-    <!-- 19 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=19">
-        <h3>Simba</h3>
-        <p>Idade: 2 anos</p>
-        <button>Adotar</button>
-    </div>
-
-    <!-- 20 -->
-    <div class="card">
-        <img src="https://placedog.net/300/200?id=20">
-        <h3>Maya</h3>
-        <p>Idade: 4 anos</p>
-        <button>Adotar</button>
-    </div>
+            setTimeout(() => {
+                modal.classList.remove("show");
+                modal.style.display = "none";
+            }, 300);
+        }
+    </script>
 </body>
 
 </html>
