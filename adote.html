@@ -3,90 +3,165 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adote</title>
+    <title>Teste Adotar</title>
     <link rel="stylesheet" href="Styles/adote.css">
+    li
+
 </head>
 
 <body>
+
+    <div class="container">
+
+        <!-- FILTRO -->
+        <aside class="filtro">
+            <h3>Filtrar</h3>
+
+            <h4>Animal</h4>
+            <label><input type="checkbox"> Cães</label>
+            <label><input type="checkbox"> Gatos</label>
+
+            <h4>Sexo</h4>
+            <label><input type="checkbox"> Macho</label>
+            <label><input type="checkbox"> Fêmea</label>
+
+            <h4>Porte</h4>
+            <label><input type="checkbox"> Pequeno</label>
+            <label><input type="checkbox"> Médio</label>
+            <label><input type="checkbox"> Grande</label>
+        </aside>
+    </div>
+
+
     <div class="cards">
 
-        <div class="card" onclick="abrirModal(this)">
+        <div class="card"
+            onclick="abrirModal(this, 'Thor', '2 anos', 'Macho', 'Porte médio', 'Muito amigável e brincalhão 🐶')">
             <img src="https://placedog.net/400/300?id=1">
+            <h3>Thor</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Luna', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito carinhosa ❤️')">
+            <img src="https://placedog.net/400/300?id=2">
+            <h3>Luna</h3>
+        </div>
+
+
+        <div class="card" onclick="abrirModal(this, 'Max', '3 anos', 'Macho', 'Porte médio', 'Muito brincalhão 🎾')">
+            <img src="https://placedog.net/400/300?id=3">
+            <h3>Max</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Mel', '2 anos', 'Fêmea', 'Porte pequeno', 'Muito dócil 💕')">
+            <img src="https://placedog.net/400/300?id=4">
+            <h3>Mel</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Rex', '5 anos', 'Macho', 'Porte grande', 'Muito protetor 🛡️')">
+            <img src="https://placedog.net/400/300?id=5">
+            <h3>Rex</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Nina', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito carinhosa ❤️')">
+            <img src="https://placedog.net/400/300?id=6">
+            <h3>Nina</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Zeus', '4 anos', 'Macho', 'Porte grande', 'Muito forte 💪')">
+            <img src="https://placedog.net/400/300?id=7">
+            <h3>Zeus</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Bela', '2 anos', 'Fêmea', 'Porte médio', 'Muito alegre 😄')">
+            <img src="https://placedog.net/400/300?id=8">
+            <h3>Bela</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Toby', '3 anos', 'Macho', 'Porte pequeno', 'Muito esperto 🧠')">
+            <img src="https://placedog.net/400/300?id=9">
+            <h3>Toby</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Amora', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito fofa 🐾')">
+            <img src="https://placedog.net/400/300?id=10">
+            <h3>Amora</h3>
+        </div>
+
+        <!-- GATOS -->
+
+        <div class="card"
+            onclick="abrirModal(this, 'Mimi', '2 anos', 'Fêmea', 'Pequeno', 'Muito tranquila e carinhosa 🐱')">
+            <img src="Styles/img/gato1.jpg">
+            <h3>Mimi</h3>
+        </div>
+
+        <div class="card"
+            onclick="abrirModal(this, 'Tom', '3 anos', 'Macho', 'Médio', 'Muito esperto e brincalhão 😼')">
+            <img src="Styles/img/gato2.jpg">
+            <h3>Tom</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Lili', '1 ano', 'Fêmea', 'Pequeno', 'Muito dócil 💕')">
+            <img src="Styles/img/gato3.jpg">
+            <h3>Lili</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Simba', '2 anos', 'Macho', 'Grande', 'Muito curioso 🐾')">
+            <img src="Styles/img/gato4.jpg">
+            <h3>Simba</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Nina', '4 anos', 'Fêmea', 'Médio', 'Muito calma 😺')">
+            <img src="Styles/img/gato5.jpg">
+            <h3>Nina</h3>
+        </div>
+
+        <div class="card" onclick="abrirModal(this, 'Felix', '2 anos', 'Macho', 'Medio', 'Muito brincalhão 🎾')">
+            <img src="Styles/img/gato6.jpg">
+            <h3>Felix</h3>
+        </div>
+        <div class="card" onclick="abrirModal(this, 'Frajola', '3 anos', 'Macho', 'Pequeno', 'Muito calmo')">
+            <img src="Styles/img/gato7.jpg">
+            <h3>Frajola</h3>
+        </div>
+        <div class="card" onclick="abrirModal(this, 'Peludin', '2 anos', 'Macho', 'Pequeno', 'Muito na paz')">
+            <img src="Styles/img/gato8.jpg">
+            <h3>Peludin</h3>
+        </div>
+        <div class="card" onclick="abrirModal(this, 'Estrela', '2 anos', 'Fêmea', 'Pequeno', 'Muito brincalhona 🎾')">
+            <img src="Styles/img/gato9.jpg">
+            <h3>Estrela</h3>
+        </div>
+        <div class="card" onclick="abrirModal(this, 'Nala', '2 anos', 'Fêmea', 'Pequeno', 'Muito dorminhoca')">
+            <img src="Styles/img/gato10.jpg">
+            <h3>Nala</h3>
         </div>
 
     </div>
 
-    <!-- MODAL -->
+
+
     <div id="modal" class="modal">
         <div class="modal-content">
 
-            <span class="fechar" onclick="fecharModal()">×</span>
+            <span class="fechar" onclick="fecharModal()">X</span>
 
             <img id="modal-img">
-            <h2>Thor</h2>
-            <p>Idade: 2 anos</p>
-            <p>Amigável 🐶</p>
+
+            <h2 id="modal-nome"></h2>
+            <p id="modal-idade"></p>
+            <p id="modal-sexo"></p>
+            <p id="modal-porte"></p>
+            <p id="modal-desc"></p>
 
             <button>Adotar</button>
 
         </div>
     </div>
-    <script>
-        let cardOriginal = null;
 
-        function abrirModal(card, nome, idade, desc) {
-            const modal = document.getElementById("modal");
-            const img = card.querySelector("img");
+    <script src="testeadote.js"></script>
 
-            cardOriginal = img;
 
-            const modalImg = document.getElementById("modal-img");
-
-            // Pega posição da imagem
-            const rect = img.getBoundingClientRect();
-
-            modalImg.src = img.src;
-            modalImg.style.position = "fixed";
-            modalImg.style.top = rect.top + "px";
-            modalImg.style.left = rect.left + "px";
-            modalImg.style.width = rect.width + "px";
-            modalImg.style.height = rect.height + "px";
-            modalImg.style.transition = "0.4s ease";
-
-            modal.style.display = "flex";
-
-            setTimeout(() => {
-                modal.classList.add("show");
-
-                modalImg.style.top = "50%";
-                modalImg.style.left = "50%";
-                modalImg.style.transform = "translate(-50%, -50%)";
-                modalImg.style.width = "350px";
-                modalImg.style.height = "auto";
-            }, 10);
-
-            document.getElementById("modal-nome").innerText = nome;
-            document.getElementById("modal-idade").innerText = "Idade: " + idade;
-            document.getElementById("modal-desc").innerText = desc;
-        }
-
-        function fecharModal() {
-            const modal = document.getElementById("modal");
-            const modalImg = document.getElementById("modal-img");
-
-            const rect = cardOriginal.getBoundingClientRect();
-
-            modalImg.style.top = rect.top + "px";
-            modalImg.style.left = rect.left + "px";
-            modalImg.style.width = rect.width + "px";
-
-            setTimeout(() => {
-                modal.classList.remove("show");
-                modal.style.display = "none";
-            }, 300);
-        }
-    </script>
 </body>
 
 </html>
