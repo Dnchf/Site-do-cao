@@ -32,11 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(i);
     };
 
-    setInterval(() => {
-        let i = (index + 1) % slides.length;
-        showSlide(i);
-    }, 5000);
-
     showSlide(0);
 
 });

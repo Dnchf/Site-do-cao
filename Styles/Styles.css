@@ -15,23 +15,21 @@ header {
     height: 150px;
 }
 
-
 .site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 2000 auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
 /* ================= LOGO ================= */
 
 .site-header img {
-    height: 200px;   
+    height: 150px; 
     width: auto;
     object-fit: contain;
-    display: block;
 }
 
 /* ================= NAV ================= */
@@ -39,21 +37,22 @@ header {
 header nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 17px;
-    transition: color 0.3s ease;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 header nav a:hover {
     color: #faa72a;
 }
 
-/* ================ hero   ========== */
+/* ================ HERO ========== */
 
 .hero {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 83vh;
     overflow: hidden;
 }
 
@@ -62,7 +61,7 @@ header nav a:hover {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center right;
     display: none;
 }
 
@@ -94,7 +93,8 @@ header nav a:hover {
     font-size: 1.2rem;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -107,8 +107,13 @@ header nav a:hover {
     border-radius: 50%;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
 
 .dots {
     position: absolute;
@@ -142,4 +147,3 @@ header nav a:hover {
         font-size: 2rem;
     }
 }
-
