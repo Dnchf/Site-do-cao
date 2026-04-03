@@ -5,50 +5,71 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-/* ================= HEADER ================= */
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
 
+/* ===== HEADER ===== */
 header {
-    background-color: #4b3c5d;
+    background-image: linear-gradient(to right, #9361ff, #6c43ea, #6c43ea, #4223d6);
     color: white;
     width: 100%;
-    height: 150px;
+    height: 90px;
+    display: flex;
+    align-items: center;
 }
 
 .site-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: right;
+    width: 70%;
 }
-
-/* ================= LOGO ================= */
 
 .site-header img {
-    height: 150px; 
-    width: auto;
-    object-fit: contain;
+    height: 130px;
+
 }
 
-/* ================= NAV ================= */
+header nav {
+    display: flex;
+    gap: 25px;
+}
 
 header nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #faa72a;
+    left: 0;
+    bottom: -5px;
     transition: 0.3s;
 }
 
-header nav a:hover {
-    color: #faa72a;
+header nav a:hover::after {
+    width: 100%;
 }
 
-/* ================ HERO ========== */
-
+/* ===== HERO SLIDER ===== */
 .hero {
     position: relative;
     width: 100%;
@@ -56,24 +77,37 @@ header nav a:hover {
     overflow: hidden;
 }
 
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center right;
-    display: none;
+    background-position: center;
+
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 1s ease-in-out, transform 6s ease;
+
+    z-index: 0;
 }
 
 .slide.active {
-    display: block;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
 }
 
 .overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
 }
 
 .content {
@@ -82,44 +116,46 @@ header nav a:hover {
     left: 10%;
     color: white;
     max-width: 500px;
+    z-index: 2;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
 }
 
-.content h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.slide.active .content {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.content p {
-    font-size: 1.2rem;
-}
-
-.prev,
-.next {
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #21203F;
+    background: #4223d6;
     border: none;
     color: white;
     font-size: 30px;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
 }
 
-.prev {
-    left: 20px;
+.prev, .next {
+    opacity: 0.7;
+    transition: 0.3s;
 }
 
-.next {
-    right: 20px;
-}
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .dots {
     position: absolute;
     bottom: 20px;
     width: 100%;
     text-align: center;
+    z-index: 10;
 }
 
 .dots span {
@@ -127,23 +163,180 @@ header nav a:hover {
     width: 10px;
     margin: 5px;
     background: #7d7bc9;
-    display: inline-block;
     border-radius: 50%;
+    display: inline-block;
     cursor: pointer;
 }
 
 .dots .active {
-    background: #5c5aa380;
+    background: #fff;
 }
 
+
+
+
+
+/* ===== QUEM SOMOS ===== */
+
+.quem-somos {
+    padding: 120px 80px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.quem-somos p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.quem-somos h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #21203F;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.quem-somos h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #faa72a;
+    display: block;
+    margin: 10px auto 0;
+}
+ 
+
+
+/* ===== NOSSA SEDE ===== */
+
+.nossa-sede {
+    padding: 120px 80px;
+    background: #f8f8ff;
+    text-align: center;
+}
+
+.nossa-sede p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.nossa-sede h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #21203F;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.nossa-sede h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #faa72a;
+    display: block;
+    margin: 10px auto 0;
+}
+ 
+
+/* ===== DOAÇÃO ===== */
+
+
+.doacao {
+    background: linear-gradient(135deg, #4b3c5d, #21203F);
+    color: white;
+    text-align: center;
+    padding: 120px 80px;
+}
+
+.doacao p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.doacao h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.doacao h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #faa72a;
+    display: block;
+    margin: 10px auto 0;
+}
+ 
+/* ===== FORMULÁRIO ===== */
+.form-doacao {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-doacao input {
+    width: 300px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.form-doacao button {
+    background: #faa72a;
+    color: #21203F;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-doacao button:hover {
+    background: #ffbf5a;
+    transform: scale(1.05);
+}
+
+
+.info-doacao {
+    margin-top: 30px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-    .content {
-        left: 5%;
-        right: 5%;
-        text-align: center;
+
+    header nav {
+        display: none;
     }
 
-    .content h1 {
-        font-size: 2rem;
+    .content {
+        left: 5%;
+        max-width: 90%;
+    }
+
+    .form-doacao input {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .quem-somos p,
+    .nossa-sede p,
+    .doacao p {
+        font-size: 16px;
     }
 }
