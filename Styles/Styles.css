@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+
 /* ===== RESET ===== */
 * {
     margin: 0;
@@ -128,7 +129,8 @@ header nav a:hover::after {
     transform: translateY(0);
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -142,13 +144,19 @@ header nav a:hover::after {
     z-index: 10;
 }
 
-.prev, .next {
+.prev,
+.next {
     opacity: 0.7;
     transition: 0.3s;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
 
 .dots {
     position: absolute;
@@ -176,53 +184,74 @@ header nav a:hover::after {
 
 
 
-/* ===== QUEM SOMOS ===== */
-
+/* ===== QUEM SOMOS PARTE DANILO ===== */
 .quem-somos {
     padding: 120px 80px;
     background: #ffffff;
-    text-align: center;
 }
 
-.quem-somos p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
+
+
+.quem-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+.quem-texto {
+    max-width: 600px;
 }
 
 .quem-somos h2 {
     text-align: center;
     font-size: 32px;
     color: #21203F;
-    margin-bottom: 30px;
-    position: relative;
+    margin-bottom: 20px;
 }
+
 
 .quem-somos h2::after {
     content: "";
-    width: 60px;
+    width: 100px;
     height: 3px;
     background: #faa72a;
     display: block;
     margin: 10px auto 0;
 }
- 
 
+.quem-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* IMAGEM */
+.quem-img {
+    flex-shrink: 0;
+}
+
+.quem-foto {
+    width: 400px;
+    border-radius: 10px;
+}
 
 /* ===== NOSSA SEDE ===== */
 
 .nossa-sede {
-    padding: 120px 80px;
+    padding: 120px 20px;
     background: #f8f8ff;
+}
+
+/* CONTAINER */
+.nossa-container {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.nossa-sede p {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #444;
-}
-
+/* TÍTULO */
 .nossa-sede h2 {
     text-align: center;
     font-size: 32px;
@@ -231,6 +260,7 @@ header nav a:hover::after {
     position: relative;
 }
 
+/* LINHA */
 .nossa-sede h2::after {
     content: "";
     width: 60px;
@@ -239,8 +269,14 @@ header nav a:hover::after {
     display: block;
     margin: 10px auto 0;
 }
- 
 
+/* TEXTO */
+.nossa-sede p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #444;
+    line-height: 1.6;
+}
 /* ===== DOAÇÃO ===== */
 
 
@@ -255,6 +291,7 @@ header nav a:hover::after {
     font-size: 18px;
     margin-bottom: 15px;
 }
+
 .doacao h2 {
     text-align: center;
     font-size: 32px;
@@ -271,7 +308,7 @@ header nav a:hover::after {
     display: block;
     margin: 10px auto 0;
 }
- 
+
 /* ===== FORMULÁRIO ===== */
 .form-doacao {
     margin-top: 30px;

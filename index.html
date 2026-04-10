@@ -10,66 +10,68 @@
 </head>
 
 <body>
-    
+
     <header>
         <div class="site-header">
-                <img src="Styles/img/logosite.png" alt="Logo do site">
-          
+            <img src="Styles/img/logosite.png" alt="Logo do site">
+
 
             <nav>
 
-                <a href="home">Início</a>
-                <a href="sobre">Quem somos</a>
-                <a href="localizacao">Nossa Sede</a>
-                <a href="adocao">Faça uma doação</a>
+                <a href="#home">Início</a>
+                <a href="#sobre">Quem somos</a>
+                <a href="#localizacao">Nossa Sede</a>
+                <a href="#adocao">Faça uma doação</a>
                 <a href="adote.html">Adote um amigo(a)</a>
 
             </nav>
         </div>
     </header>
 
-  <section class="hero">
+    <section class="hero">
 
-    <div class="slides">
+        <div class="slides">
 
-        <div class="slide active" style="background-image: url('Styles/img/imgAnimais/slide3.jpg');">
-            <div class="overlay"></div>
-            <div class="content">
-                <h1>Toda vida importa!</h1>
-                <p>Ajude um animal a encontrar um lar cheio de amor.</p>
+            <div class="slide active" style="background-image: url('Styles/img/imgAnimais/slide3.jpg');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>Toda vida importa!</h1>
+                    <p>Ajude um animal a encontrar um lar cheio de amor.</p>
+                </div>
             </div>
+
+            <div class="slide" style="background-image: url('Styles/img/imgAnimais/slide2.jpeg');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>Adote, não compre</h1>
+                    <p>Dê uma segunda chance para quem precisa.</p>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('Styles/img/imgAnimais/slide1.jpg');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>Faça a diferença</h1>
+                    <p>Seu apoio salva vidas todos os dias.</p>
+                </div>
+            </div>
+
         </div>
 
-        <div class="slide" style="background-image: url('Styles/img/imgAnimais/slide2.jpeg');">
-            <div class="overlay"></div>
-            <div class="content">
-                <h1>Adote, não compre</h1>
-                <p>Dê uma segunda chance para quem precisa.</p>
-            </div>
-        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
 
-        <div class="slide" style="background-image: url('Styles/img/imgAnimais/slide1.jpg');">
-            <div class="overlay"></div>
-            <div class="content">
-                <h1>Faça a diferença</h1>
-                <p>Seu apoio salva vidas todos os dias.</p>
-            </div>
-        </div>
+        <div class="dots"></div>
 
-    </div>
-
-    <button class="prev">❮</button>
-    <button class="next">❯</button>
-
-    <div class="dots"></div>
-
-</section>
+    </section>
 
     <section class="quem-somos" id="sobre">
-        <div class="container">
+                    <h2>Quem Somos</h2>
+        <div class="quem-container">
 
 
-            <h2>Quem Somos</h2>
+
+            
 
             <p>
                 O <strong>Site do Cão</strong> nasceu com o propósito de ajudar animais a encontrarem um lar cheio de
@@ -84,11 +86,15 @@
                 Se você ama animais assim como nós, junte-se a essa causa! 🐈🐶❤️
             </p>
 
+            <div class="quem-img">
+                <img src="dogquemsomos1.jpg" alt="" class="quem-foto">
+            </div>
+
         </div>
     </section>
 
     <section class="nossa-sede" id="localizacao">
-        <div class="container">
+        <div class="nossa-container">
 
             <h2>Nossa Sede</h2>
 
@@ -144,9 +150,9 @@
             </div>
 
         </div>
-   
-    
-    <script src="Script/Script.js"></script>
+
+
+        <script src="Script/Script.js"></script>
 </body>
 
 </html>
