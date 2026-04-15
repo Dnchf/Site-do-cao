@@ -184,7 +184,7 @@ header nav a:hover::after {
 
 
 
-/* ===== QUEM SOMOS PARTE DANILO ===== */
+/* ===== QUEM SOMOS ===== */
 .quem-somos {
     padding: 120px 80px;
     background: #ffffff;
@@ -195,18 +195,18 @@ header nav a:hover::after {
 .quem-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: center;
+    gap: 20px;
 }
 
 
-.quem-texto {
-    max-width: 600px;
+.quem-container p {
+    max-width: 800px;
 }
 
 .quem-somos h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: 36px;
     color: #21203F;
     margin-bottom: 20px;
 }
@@ -221,70 +221,95 @@ header nav a:hover::after {
     margin: 10px auto 0;
 }
 
+
 .quem-container p {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
 }
 
-/* IMAGEM */
+
 .quem-img {
     flex-shrink: 0;
 }
 
 .quem-foto {
-    width: 400px;
-    border-radius: 10px;
+    width: 600px;
+    border-radius: 50px;
 }
 
 /* ===== NOSSA SEDE ===== */
 
 .nossa-sede {
-    padding: 120px 20px;
-    background: #f8f8ff;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f8f8ff, #eef1ff);
 }
 
-/* CONTAINER */
 .nossa-container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-/* TÍTULO */
+
 .nossa-sede h2 {
-    text-align: center;
-    font-size: 32px;
+    font-size: 36px;
     color: #21203F;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
 }
 
-/* LINHA */
+
 .nossa-sede h2::after {
     content: "";
-    width: 60px;
-    height: 3px;
+    width: 70px;
+    height: 4px;
     background: #faa72a;
     display: block;
-    margin: 10px auto 0;
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
-/* TEXTO */
-.nossa-sede p {
+
+.descricao {
     font-size: 18px;
+    color: #555;
+    line-height: 1.7;
     margin-bottom: 15px;
-    color: #444;
-    line-height: 1.6;
 }
+
+
+.info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.info-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+
+.info-item:hover {
+    transform: translateY(-3px);
+}
+
 /* ===== DOAÇÃO ===== */
 
 
 .doacao {
-    background: linear-gradient(135deg, #4b3c5d, #21203F);
+    background-image: linear-gradient(to right, #9361ff, #6c43ea, #6c43ea, #4223d6);
     color: white;
     text-align: center;
-    padding: 120px 80px;
+    padding: 50px 80px;
 }
 
 .doacao p {
