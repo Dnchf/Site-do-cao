@@ -15,7 +15,7 @@ body {
     border-radius: 8px;
     font-weight: bold;
 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-     display: flex;
+    display: flex;
     gap: 40px;
     max-width: 1200px;
     margin: auto;
@@ -40,6 +40,7 @@ body {
     border-radius: 12px;
     color: white;
     height: fit-content;
+    position: sticky;
 }
 
 
@@ -87,16 +88,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-
     background: rgba(0, 0, 0, 0.7);
-
     display: flex;
     justify-content: center;
-    align-items: center;
-
+    align-items: flex-start;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+    overflow-y: auto;
+    padding: 20px;
 }
 
 .modal.show {
@@ -111,6 +111,8 @@ body {
     width: 350px;
     text-align: center;
 
+    margin: auto;
+
     transform: scale(0.7);
     transition: 0.3s;
 }
@@ -121,6 +123,8 @@ body {
 
 .modal-content img {
     width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .fechar {
@@ -132,11 +136,8 @@ body {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .card {
@@ -166,3 +167,27 @@ body {
     font-size: 18px;
     color: #21203F;
 }
+
+.btn-adotar {
+    display: inline-block;
+    background-color: #a639ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-adotar:hover {
+    background-color: #280072;
+    transform: scale
+}
+
+.filtros {
+    position: sticky;
+    top: 20px;
+}
+
+
+

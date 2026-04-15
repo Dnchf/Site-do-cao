@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste Adotar</title>
     <link rel="stylesheet" href="Styles/adote.css">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Styles/img/favicon.ico" type="">
+
 
 </head>
 
@@ -13,6 +16,10 @@
     <a href="index.html" class="btn-voltar">⬅ Voltar</a>
 
     <div class="container">
+
+
+
+
 
         <!-- FILTRO -->
         <aside class="filtro">
@@ -32,177 +39,184 @@
             <label><input type="checkbox" id="Grande"> Grande</label>
         </aside>
 
-
-        <!---CACHORROS-->
-        <div class="cards">
-
-            <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Médio"
-                onclick="abrirModal(this, 'Thor', '2 anos', 'Macho', 'Porte médio', 'Muito amigável e brincalhão 🐶')">
-                <img src="Styles/img/cachorro10.jpg">
-                <h3>Thor</h3>
-            </div>
-
-            <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Luna', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito carinhosa ❤️')">
-                <img src="Styles/img/cachorro7.jpg">
-                <h3>Luna</h3>
-            </div>
+        
 
 
-            <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Grande"
-                onclick="abrirModal(this, 'Max', '3 anos', 'Macho', 'Porte médio', 'Muito brincalhão 🎾')">
-                <img src="Styles/img/cachorro11.jpg">
-                <h3>Max</h3>
-            </div>
+            <!---CACHORROS-->
+            <div class="cards">
 
-            <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
-                 onclick="abrirModal(this, 'Mel', '2 anos', 'Fêmea', 'Porte pequeno', 'Muito dócil 💕')">
-                <img src="Styles/img/cachorro2.jpg">
-                <h3>Mel</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Médio"
+                    onclick="abrirModal(this, 'Thor', '2 anos', 'Macho', 'Porte médio', 'Muito amigável e brincalhão 🐶')">
+                    <img src="Styles/img/cachorro10.jpg">
+                    <h3>Thor</h3>
+                </div>
 
-            <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Grande"
-                onclick="abrirModal(this, 'Rex', ' 7 Meses', 'Macho', 'Porte grande', 'Muito protetor 🛡️')">
-                <img src="Styles/img/cachorro12.jpg">
-                <h3>Rex</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Luna', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito carinhosa ❤️')">
+                    <img src="Styles/img/cachorro7.jpg">
+                    <h3>Luna</h3>
+                </div>
 
-            <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Nina', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito carinhosa ❤️')">
-                <img src="Styles/img/cachorro5.jpg">
-                <h3>Nina</h3>
-            </div>
 
-            <div class="card"  data-animal="cachorro" data-sexo="Macho" data-porte="Grande"
-                onclick="abrirModal(this, 'Zeus', '4 anos', 'Macho', 'Porte grande', 'Muito forte 💪')">
-                <img src="Styles/img/cachorro4.jpg">
-                <h3>Zeus</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Grande"
+                    onclick="abrirModal(this, 'Max', '3 anos', 'Macho', 'Porte médio', 'Muito brincalhão 🎾')">
+                    <img src="Styles/img/cachorro11.jpg">
+                    <h3>Max</h3>
+                </div>
 
-            <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Médio"
-                 onclick="abrirModal(this, 'Bela', '2 anos', 'Fêmea', 'Porte médio', 'Muito alegre 😄')">
-                <img src="Styles/img/cachorro3.jpg">
-                <h3>Bela</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Mel', '2 anos', 'Fêmea', 'Porte pequeno', 'Muito dócil 💕')">
+                    <img src="Styles/img/cachorro2.jpg">
+                    <h3>Mel</h3>
+                </div>
 
-            <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Toby', '3 anos', 'Macho', 'Porte pequeno', 'Muito esperto 🧠')">
-                <img src="Styles/img/cachorro1.jpg">
-                <h3>Toby</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Grande"
+                    onclick="abrirModal(this, 'Rex', ' 7 Meses', 'Macho', 'Porte grande', 'Muito protetor 🛡️')">
+                    <img src="Styles/img/cachorro12.jpg">
+                    <h3>Rex</h3>
+                </div>
 
-            <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Amora', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito fofa 🐾')">
-                <img src="Styles/img/cachorro9.jpg">
-                <h3>Amora</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Nina', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito carinhosa ❤️')">
+                    <img src="Styles/img/cachorro5.jpg">
+                    <h3>Nina</h3>
+                </div>
 
-            <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Amora', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito fofa ')">
-                <img src="Styles/img/cachorro8.jpg">
-                <h3>Amora</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Grande"
+                    onclick="abrirModal(this, 'Zeus', '4 anos', 'Macho', 'Porte grande', 'Muito forte 💪')">
+                    <img src="Styles/img/cachorro4.jpg">
+                    <h3>Zeus</h3>
+                </div>
 
-            <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Amora', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito fofa 🐾')">
-                <img src="Styles/img/cachorro6.jpg">
-                <h3>Amora</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Médio"
+                    onclick="abrirModal(this, 'Bela', '2 anos', 'Fêmea', 'Porte médio', 'Muito alegre 😄')">
+                    <img src="Styles/img/cachorro3.jpg">
+                    <h3>Bela</h3>
+                </div>
 
-            <!-- GATOS -->
+                <div class="card" data-animal="cachorro" data-sexo="Macho" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Toby', '3 anos', 'Macho', 'Porte pequeno', 'Muito esperto 🧠')">
+                    <img src="Styles/img/cachorro1.jpg">
+                    <h3>Toby</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="pequeno"
-                onclick="abrirModal(this, 'Mimi', '2 anos', 'Fêmea', 'Pequeno', 'Muito tranquila e carinhosa 🐱')">
-                <img src="Styles/img/gato1.jpg">
-                <h3>Mimi</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Amora', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito fofa 🐾')">
+                    <img src="Styles/img/cachorro9.jpg">
+                    <h3>Amora</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Médio"
-                onclick="abrirModal(this, 'Tom', '3 anos', 'Macho', 'Médio', 'Muito esperto e brincalhão 😼')">
-                <img src="Styles/img/gato2.jpg">
-                <h3>Tom</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Amora', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito fofa ')">
+                    <img src="Styles/img/cachorro8.jpg">
+                    <h3>Amora</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="pequeno"
-                onclick="abrirModal(this, 'Lili', '1 ano', 'Fêmea', 'Pequeno', 'Muito dócil 💕')">
-                <img src="Styles/img/gato3.jpg">
-                <h3>Lili</h3>
-            </div>
+                <div class="card" data-animal="cachorro" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Amora', '1 ano', 'Fêmea', 'Porte pequeno', 'Muito fofa 🐾')">
+                    <img src="Styles/img/cachorro6.jpg">
+                    <h3>Amora</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Grande"
-                onclick="abrirModal(this, 'Simba', '2 anos', 'Macho', 'Grande', 'Muito curioso 🐾')">
-                <img src="Styles/img/gato4.jpg">
-                <h3>Simba</h3>
-            </div>
+                <!-- GATOS -->
 
-            <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Médio"
-                onclick="abrirModal(this, 'Nina', '4 anos', 'Fêmea', 'Médio', 'Muito calma 😺')">
-                <img src="Styles/img/gato5.jpg">
-                <h3>Nina</h3>
-            </div>
+                <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="pequeno"
+                    onclick="abrirModal(this, 'Mimi', '2 anos', 'Fêmea', 'Pequeno', 'Muito tranquila e carinhosa 🐱')">
+                    <img src="Styles/img/imgAnimais/gato1.jpg">
+                    <h3>Mimi</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Medio"
-                 onclick="abrirModal(this, 'Felix', '2 anos', 'Macho', 'Medio', 'Muito brincalhão 🎾')">
-                <img src="Styles/img/gato6.jpg">
-                <h3>Felix</h3>
-            </div>
+                <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Médio"
+                    onclick="abrirModal(this, 'Tom', '3 anos', 'Macho', 'Médio', 'Muito esperto e brincalhão 😼')">
+                    <img src="Styles/img/imgAnimais/gato2.jpg">
+                    <h3>Tom</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Pequeno"
-                 onclick="abrirModal(this, 'Frajola', '3 anos', 'Macho', 'Pequeno', 'Muito calmo')">
-                <img src="Styles/img/gato7.jpg">
-                <h3>Frajola</h3>
-            </div>
-            <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Peludin', '2 anos', 'Macho', 'Pequeno', 'Sou muito na paz')">
-                <img src="Styles/img/gato8.jpg">
-                <h3>Peludin</h3>
-            </div>
-            <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Estrela', '2 anos', 'Fêmea', 'Pequeno', 'Muito brincalhona 🎾')">
-                <img src="Styles/img/gato9.jpg">
-                <h3>Estrela</h3>
-            </div>
-            <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Nala', '2 anos', 'Fêmea', 'Pequeno', 'Muito dorminhoca')">
-                <img src="Styles/img/gato10.jpg">
-                <h3>Nala</h3>
-            </div>
+                <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="pequeno"
+                    onclick="abrirModal(this, 'Lili', '1 ano', 'Fêmea', 'Pequeno', 'Muito dócil 💕')">
+                    <img src="Styles/img/imgAnimais/gato3.jpg">
+                    <h3>Lili</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Nala', '2 anos', 'Fêmea', 'Pequeno', 'Sou muito boazinha ')">
-                <img src="Styles/img/gato11.jpg">
-                <h3>Nona</h3>
-            </div>
+                <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Grande"
+                    onclick="abrirModal(this, 'Simba', '2 anos', 'Macho', 'Grande', 'Muito curioso 🐾')">
+                    <img src="Styles/img/imgAnimais/gato4.jpg">
+                    <h3>Simba</h3>
+                </div>
 
-            <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
-                onclick="abrirModal(this, 'Nala', '2 anos', 'Fêmea', 'Pequeno', 'Amo dormir')">
-                <img src="Styles/img/gato12.jpg">
-                <h3>Luna</h3>
+                <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Médio"
+                    onclick="abrirModal(this, 'Nina', '4 anos', 'Fêmea', 'Médio', 'Muito calma 😺')">
+                    <img src="Styles/img/imgAnimais/gato5.jpg">
+                    <h3>Nina</h3>
+                </div>
+
+                <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Medio"
+                    onclick="abrirModal(this, 'Felix', '2 anos', 'Macho', 'Medio', 'Muito brincalhão 🎾')">
+                    <img src="Styles/img/imgAnimais/gato6.jpg">
+                    <h3>Felix</h3>
+                </div>
+
+                <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Frajola', '3 anos', 'Macho', 'Pequeno', 'Muito calmo')">
+                    <img src="Styles/img/imgAnimais/gato7.jpg">
+                    <h3>Frajola</h3>
+                </div>
+                <div class="card" data-animal="gato" data-sexo="Macho" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Peludin', '2 anos', 'Macho', 'Pequeno', 'Sou muito na paz')">
+                    <img src="Styles/img/imgAnimais/gato8.jpg">
+                    <h3>Peludin</h3>
+                </div>
+                <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Estrela', '2 anos', 'Fêmea', 'Pequeno', 'Muito brincalhona 🎾')">
+                    <img src="Styles/img/imgAnimais/gato9.jpg">
+                    <h3>Estrela</h3>
+                </div>
+                <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Nala', '2 anos', 'Fêmea', 'Pequeno', 'Muito dorminhoca')">
+                    <img src="Styles/img/imgAnimais/gato10.jpg">
+                    <h3>Nala</h3>
+                </div>
+
+                <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Nala', '2 anos', 'Fêmea', 'Pequeno', 'Sou muito boazinha ')">
+                    <img src="Styles/img/imgAnimais/gato11.jpg">
+                    <h3>Nona</h3>
+                </div>
+
+                <div class="card" data-animal="gato" data-sexo="Fêmea" data-porte="Pequeno"
+                    onclick="abrirModal(this, 'Nala', '2 anos', 'Fêmea', 'Pequeno', 'Amo dormir')">
+                    <img src="Styles/img/imgAnimais/gato12.jpg">
+                    <h3>Luna</h3>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
+                <span class="fechar" onclick="fecharModal()">X</span>
 
-            <span class="fechar" onclick="fecharModal()">X</span>
+                <img id="modal-img">
 
-            <img id="modal-img">
+                <h2 id="modal-nome"></h2>
+                <p id="modal-idade"></p>
+                <p id="modal-sexo"></p>
+                <p id="modal-porte"></p>
+                <p id="modal-desc"></p>
 
-            <h2 id="modal-nome"></h2>
-            <p id="modal-idade"></p>
-            <p id="modal-sexo"></p>
-            <p id="modal-porte"></p>
-            <p id="modal-desc"></p>
-
-            <button>Adotar</button>
-
+                <a href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20adotar%20um%20cachorro!"
+                    target="_blank" class="btn-adotar">
+                    Adotar 🐶
+                </a>
+            </div>
         </div>
-    </div>
 
-    <script src="Script/testeadote.js"></script>
+
+
+
+        <script src="Script/testeadote.js"></script>
 
 
 </body>
