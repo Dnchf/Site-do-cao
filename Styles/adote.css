@@ -1,8 +1,10 @@
+/* ===== BASE ===== */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color:  #9361ff
+    background-color: #9361ff;
 }
 
+/* ===== BOTÃO VOLTAR ===== */
 .btn-voltar {
     position: fixed;
     top: 20px;
@@ -15,12 +17,14 @@ body {
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+    z-index: 80;
 }
 
 .btn-voltar:hover {
     transform: translateY(-2px);
 }
 
+/* ===== CONTAINER ===== */
 .container {
     display: flex;
     gap: 40px;
@@ -29,18 +33,17 @@ body {
     padding: 30px;
 }
 
-
-
+/* ===== FILTRO ===== */
 .filtro {
     width: 220px;
-    background:  #774ecf;
+    background: #774ecf;
     padding: 20px;
     border-radius: 12px;
     color: white;
     height: fit-content;
     position: sticky;
+    top: 70px;
 }
-
 
 .filtro h3 {
     margin-bottom: 10px;
@@ -55,113 +58,16 @@ body {
     margin: 5px 0;
 }
 
-
+/* ===== CARDS ===== */
 .cards {
     flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.card {
-    width: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-}
-
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    overflow-y: auto;
-    padding: 20px;
-}
-
-.modal.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-    text-align: center;
-
-    margin: auto;
-
-    transform: scale(0.7);
-    transition: 0.3s;
-}
-
-.modal.show .modal-content {
-    transform: scale(1);
-}
-
-.modal-content img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
-.fechar {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-
-    width: 35px;
-    height: 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #f0f0f0;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-
-    border-radius: 50%;
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.fechar:hover {
-    background: #ff4d4d;
-    color: white;
-    transform: rotate(90deg);
-}
-
-/* ===== CARDS BONITOS ===== */
-
-.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
 .card {
+    position: relative;
     background: white;
     border-radius: 12px;
     overflow: hidden;
@@ -189,6 +95,77 @@ body {
     color: #21203F;
 }
 
+/* ===== MODAL VER ANIMAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 500;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    margin: auto;
+    transform: scale(0.7);
+    transition: 0.3s;
+    position: relative;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fechar:hover {
+    background: #ff4d4d;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* ===== BOTÃO ADOTAR ===== */
 .btn-adotar {
     display: inline-block;
     background-color: #a639ff;
@@ -198,17 +175,425 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 .btn-adotar:hover {
     background-color: #280072;
-    transform: scale
+    transform: scale(1.05);
 }
 
-.filtros {
+/* ===== BOTÃO ADMIN SECRETO ===== */
+.btn-admin-acesso {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.btn-admin-acesso:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+/* ===== BARRA DO ADMIN ===== */
+.barra-admin {
+    display: none;
+    background: linear-gradient(to right, #21203F, #3a2d6b);
+    color: white;
+    padding: 12px 30px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
     position: sticky;
-    top: 20px;
+    top: 0;
+    z-index: 90;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
+.barra-admin.ativa {
+    display: flex;
+}
 
+.barra-admin span {
+    font-size: 14px;
+    opacity: 0.9;
+}
 
+.barra-admin .admin-acoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-adicionar-animal {
+    background: #a639ff;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-adicionar-animal:hover {
+    background: #8b24e0;
+    transform: translateY(-1px);
+}
+
+.btn-sair-admin {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-sair-admin:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== MODAL LOGIN ADMIN ===== */
+.modal-login {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.modal-login.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-box {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.login-box h3 {
+    color: #21203F;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.login-box p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.login-box input:focus {
+    border-color: #9361ff;
+}
+
+.login-box .erro-login {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 8px;
+    display: none;
+}
+
+.login-box .btn-entrar {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #9361ff, #6c43ea);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box .btn-entrar:hover {
+    background: linear-gradient(to right, #7e4fe0, #5a35c8);
+    transform: translateY(-1px);
+}
+
+.login-box .btn-cancelar {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-box .btn-cancelar:hover {
+    color: #555;
+}
+
+/* ===== MODAL ADICIONAR ANIMAL ===== */
+.modal-add {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-add.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.add-box {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 420px;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.add-box h3 {
+    color: #21203F;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-box h3 span {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #a639ff;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.form-add {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-add label {
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.form-add input,
+.form-add select,
+.form-add textarea {
+    padding: 10px 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-add input:focus,
+.form-add select:focus,
+.form-add textarea:focus {
+    border-color: #9361ff;
+}
+
+.form-add textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.form-add .linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-add .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px dashed #ddd;
+    display: none;
+    margin-top: 5px;
+}
+
+.preview-img.visivel {
+    display: block;
+}
+
+.btn-salvar-animal {
+    background: linear-gradient(to right, #9361ff, #6c43ea);
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.btn-salvar-animal:hover {
+    background: linear-gradient(to right, #7e4fe0, #5a35c8);
+    transform: translateY(-1px);
+}
+
+.btn-cancelar-add {
+    background: none;
+    border: 2px solid #eee;
+    color: #888;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cancelar-add:hover {
+    border-color: #ccc;
+    color: #555;
+}
+
+/* ===== BOTÃO EXCLUIR NOS CARDS (só admin vê) ===== */
+.btn-excluir-card {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: 0.2s;
+    z-index: 5;
+    line-height: 1;
+}
+
+.btn-excluir-card:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+body.admin-logado .btn-excluir-card {
+    display: flex;
+}
+
+/* ===== TAG "NOVO" ===== */
+.tag-novo {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #a639ff;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .filtro {
+        width: 100%;
+        position: static;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .btn-voltar {
+        top: 10px;
+        left: 10px;
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .barra-admin {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .form-add .linha-dupla {
+        grid-template-columns: 1fr;
+    }
+
+    .add-box {
+        padding: 20px 15px;
+    }
+}
